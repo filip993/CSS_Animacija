@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loptica</title>
+    <!-- link rel="stylesheet" href="css/styles.css"> -->
+    <style>
+        #loptica1{
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: red;
+            border: 1px solid black;
+            animation-name: promenaPozicije,promenaPozicije2;
+            animation-duration: 4s,4s;
+            animation-iteration-count: 1,1 ;
+            animation-delay: 2s,7s;
+            animation-fill-mode: forwards, forwards;
+            animation-timing-function: linear,ease-out;
+        }
+        #loptica2{
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: orange;
+            border: 1px solid black;
+            animation-name: promenaPozicije1,promenaPozicije3, promenaVelicine;
+            animation-duration: 4s,4s,2s;
+            animation-iteration-count: 1,1 ;
+            animation-delay: 2s,7s,12s;
+            animation-fill-mode: forwards, forwards;
+            animation-timing-function: linear,ease-out;
+        }
+        #platno{
+            position: absolute;
+            overflow: hidden;
+            border: 1px solid black;
+            width: 600px;
+            height: 600px;
+        }
+
+        @keyframes promenaPozicije {
+            0%{
+                top: 200px;
+                left: 200px;
+            }
+            100%{
+                top: -150px;
+                left: 200px;
+            }
+        }
+        @keyframes promenaPozicije1 {
+            0%{
+                top: 200px;
+                left: 200px;
+            }
+            100%{
+                top: 550px;
+                left: 200px;
+            }
+        }
+        @keyframes promenaPozicije2 {
+            0%{
+                top: 200px;
+                left: -200px;
+            }
+            100%{
+                top: 200px;
+                left: 200px;
+            }
+        }
+        @keyframes promenaPozicije3 {
+            0%{
+                top: 200px;
+                left: 600px;
+            }
+            100%{
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+        @keyframes promenaVelicine {
+            0%{
+                top: 200px;
+                left: 200px;
+                width: 200px;
+                height: 200px;
+            }
+            100%{
+                top: 300px;
+                left: 300px;
+                width: 1px;
+                height: 1px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="platno"><img src="images/wood-texture_1083-21.jpg" style="width: 600px; height: 600px;">
+    <div id="loptica1"></div>
+    <div id="loptica2"></div>
+</div>
+</body>
+</html>
